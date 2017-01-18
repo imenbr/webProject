@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be867845-1c1d-4227-bc88-cc82c799b61c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MysqlDataBase.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/template.iml" afterPath="$PROJECT_DIR$/.idea/template.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Client.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DecorClientManager.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DecorEquipeManager.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DecorMaisonManager.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Equipe.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/maison.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="template.iws" />
@@ -36,7 +39,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MysqlDataBase.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MysqlDataBase.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MysqlDataBase.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="501">
@@ -44,6 +47,77 @@
               <folding>
                 <element signature="e#7#87#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="maison.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/maison.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="501">
+              <caret line="121" column="1" lean-forward="false" selection-start-line="121" selection-start-column="1" selection-end-line="121" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Equipe.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Equipe.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="501">
+              <caret line="159" column="1" lean-forward="false" selection-start-line="159" selection-start-column="1" selection-end-line="159" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DecorMaisonManager.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DecorMaisonManager.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="501">
+              <caret line="123" column="1" lean-forward="false" selection-start-line="123" selection-start-column="1" selection-end-line="123" selection-end-column="1" />
+              <folding>
+                <marker date="1484762940585" expanded="true" signature="531:562" ph="SELECT * FRO... maison" />
+                <marker date="1484762940585" expanded="true" signature="1026:1046" ph="SELECT * FRO... maison" />
+                <marker date="1484762940585" expanded="true" signature="2195:2271" ph="insert into maison... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DecorEquipeManager.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DecorEquipeManager.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="501">
+              <caret line="102" column="1" lean-forward="false" selection-start-line="102" selection-start-column="1" selection-end-line="102" selection-end-column="1" />
+              <folding>
+                <element signature="e#7#87#0#PHP" expanded="true" />
+                <marker date="1484763131149" expanded="true" signature="565:596" ph="SELECT * FRO... equipe" />
+                <marker date="1484763131149" expanded="true" signature="1098:1118" ph="SELECT * FRO... equipe" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DecorClientManager.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DecorClientManager.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="501">
+              <caret line="105" column="1" lean-forward="false" selection-start-line="105" selection-start-column="1" selection-end-line="105" selection-end-column="1" />
+              <folding>
+                <marker date="1484763174019" expanded="true" signature="894:931" ph="SELECT * FRO... client" />
+                <marker date="1484763174019" expanded="true" signature="1875:1941" ph="insert into client... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Client.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Client.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="501">
+              <caret line="126" column="1" lean-forward="false" selection-start-line="126" selection-start-column="1" selection-end-line="126" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -77,6 +151,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/MysqlDataBase.php" />
+        <option value="$PROJECT_DIR$/maison.php" />
+        <option value="$PROJECT_DIR$/Equipe.php" />
+        <option value="$PROJECT_DIR$/DecorMaisonManager.php" />
+        <option value="$PROJECT_DIR$/DecorEquipeManager.php" />
+        <option value="$PROJECT_DIR$/DecorClientManager.php" />
+        <option value="$PROJECT_DIR$/Client.php" />
       </list>
     </option>
   </component>
@@ -200,12 +280,20 @@
       <workItem from="1484753215003" duration="461000" />
       <workItem from="1484753691965" duration="154000" />
       <workItem from="1484753867520" duration="1184000" />
-      <workItem from="1484762474596" duration="266000" />
+      <workItem from="1484762474596" duration="957000" />
     </task>
+    <task id="LOCAL-00001" summary="MysqlDataBase.pho">
+      <created>1484762780073</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1484762780073</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6059000" />
+    <option name="totallyTimeSpent" value="6750000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -252,6 +340,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="MysqlDataBase.pho" />
+    <option name="LAST_COMMIT_MESSAGE" value="MysqlDataBase.pho" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -385,6 +477,65 @@
           <folding>
             <element signature="e#7#87#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/maison.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="121" column="1" lean-forward="false" selection-start-line="121" selection-start-column="1" selection-end-line="121" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Equipe.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="159" column="1" lean-forward="false" selection-start-line="159" selection-start-column="1" selection-end-line="159" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DecorMaisonManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="123" column="1" lean-forward="false" selection-start-line="123" selection-start-column="1" selection-end-line="123" selection-end-column="1" />
+          <folding>
+            <marker date="1484762940585" expanded="true" signature="531:562" ph="SELECT * FRO... maison" />
+            <marker date="1484762940585" expanded="true" signature="1026:1046" ph="SELECT * FRO... maison" />
+            <marker date="1484762940585" expanded="true" signature="2195:2271" ph="insert into maison... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DecorEquipeManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="102" column="1" lean-forward="false" selection-start-line="102" selection-start-column="1" selection-end-line="102" selection-end-column="1" />
+          <folding>
+            <element signature="e#7#87#0#PHP" expanded="true" />
+            <marker date="1484763131149" expanded="true" signature="565:596" ph="SELECT * FRO... equipe" />
+            <marker date="1484763131149" expanded="true" signature="1098:1118" ph="SELECT * FRO... equipe" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DecorClientManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="105" column="1" lean-forward="false" selection-start-line="105" selection-start-column="1" selection-end-line="105" selection-end-column="1" />
+          <folding>
+            <marker date="1484763174019" expanded="true" signature="894:931" ph="SELECT * FRO... client" />
+            <marker date="1484763174019" expanded="true" signature="1875:1941" ph="insert into client... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="126" column="1" lean-forward="false" selection-start-line="126" selection-start-column="1" selection-end-line="126" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
