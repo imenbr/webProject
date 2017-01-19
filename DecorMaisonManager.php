@@ -1,5 +1,7 @@
 <?php
 
+require_once('Maison.php');
+
 /**
  * Created by PhpStorm.
  * User: asus
@@ -33,14 +35,14 @@ class DecorMaisonManager
 
         //id, title, level, field, shortDescription, fullDescription, path, duration, rating, image
         return new Maison ($res['id'],$res['adresse'],$res['prix'],
-            $res['image'], $res['date'],$res['nomClient']);
+            $res['image'],/*$res['date'],$res['nomClient']*/$res['theme']);
 
     }
 
     /**
      * @return array
      */
-    public function getListCourse()
+    public function getListMaison()
     {
         // Retourne la liste de tous les courses.
 
@@ -51,7 +53,7 @@ class DecorMaisonManager
         while ($res = $req->fetch())
         {
             $maisons[] = new Maison($res['id'],$res['adresse'],$res['prix'],
-                $res['image'], $res['date'],$res['nomClient']);
+                $res['image']/*$res['date'],$res['nomClient']*/,$res['theme'] );
         }
 
 
@@ -63,11 +65,11 @@ class DecorMaisonManager
     if($bdd=mysqli_connect('localhost','root','','decoration')){
     echo "connexion réussi";
     {
-    $requette="SELECT * FROM maison ";
-    $result=mysqli_query($bdd,$requette);
-    $donnee=mysqli_fetch_assoc($result);
-    $nb=mysqli_num_rows($result);
-    if($nb>0);
+     $requette="SELECT * FROM maison ";
+     $result=mysqli_query($bdd,$requette);
+     $donnee=mysqli_fetch_assoc($result);
+     $nb=mysqli_num_rows($result);
+      if($nb>0);
 
      *
      */
@@ -78,18 +80,18 @@ class DecorMaisonManager
     {
         // Préparation de la requête d'insertion.
         if($bdd=mysqli_connect('localhost','root','','decoration')){
-            if  ((isset ($_POST["adresse"]) ) && (isset($_POST["prix"]))&& (isset($_POST["image"])) && (isset($_POST["date"])&& (isset($_POST["nomClient"]))))
-            {
-                $adresse=$_POST["adresse"];
-                $prix=$_POST["prix"];
-                $image=$_POST["image"];
-                $date=$_POST["date"];
-                $nomClient=$_POST["nomClient"];
-                $requette="insert into maison values ('$adresse','$prix','$image','$date','$nomClient')";
-                $result=mysqli_query($bdd,$requette);
+        if  ((isset ($_POST["adresse"]) ) && (isset($_POST["prix"]))&& (isset($_POST["image"])) && (isset($_POST["date"])&& (isset($_POST["nomClient"]))))
+        {
+            $adresse=$_POST["adresse"];
+            $prix=$_POST["prix"];
+            $image=$_POST["image"];
+            $date=$_POST["date"];
+            $nomClient=$_POST["nomClient"];
+            $requette="insert into maison values ('$adresse','$prix','$image','$date','$nomClient')";
+            $result=mysqli_query($bdd,$requette);
 
 
-            }
+        }
         }
 // Exécution de la requête.
 
@@ -113,7 +115,7 @@ class DecorMaisonManager
         }
 
     */
-    public function updateCourse(Equipe $equipe)
+    public function updateEquipe(Equipe $equipe)
     {
         // Prépare une requête de type UPDATE.
         // Assignation des valeurs à la requête.

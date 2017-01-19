@@ -13,9 +13,9 @@ class maison
     private $_adresse;
     private $_prix;
     private $_image;
-    private $_date;
-    private $_nomClient;
-
+    //private $_date;
+    //private $_nomClient;
+    private $_theme;
 
     /**
      * maison constructor.
@@ -28,14 +28,16 @@ class maison
      */
 
 
-    public function __construct($_id, $_adresse, $_prix, $_image, $_date, $_nomClient)
+    public function __construct($_id, $_adresse, $_prix, $_image, $_theme)
     {
         $this->_id = $_id;
         $this->_adresse = $_adresse;
         $this->_prix = $_prix;
         $this->_image = $_image;
-        $this->_date = $_date;
-        $this->_nomClient = $_nomClient;
+        /*$this->_date = $_date;
+        $this->_nomClient = $_nomClient;*/
+        $this->_theme = $_theme;
+
     }
 
     /**
@@ -102,21 +104,33 @@ class maison
         $this->_image = $image;
     }
 
+
+    public function getTheme()
+    {
+        return $this->_theme;
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setTheme($id)
+    {
+        $this->_id = $id;
+    }
     /**
      * @return mixed
      */
+    /*************************************************
     public function getNomClient()
     {
         return $this->_nomClient;
     }
 
-    /**
-     * @param mixed $field
-     */
+
     public function setNomClient($nomClient)
     {
         $this->_nomClient = $nomClient;
     }
-
+*******************************************/
 
 }
