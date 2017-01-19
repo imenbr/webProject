@@ -39,16 +39,16 @@ class DecorEquipeManager
 
 
         //id, title, level, field, shortDescription, fullDescription, path, duration, rating, image
-        return new Equipe ($res['id'],$res['nom'],$res['prenom'],
+        return new Equipe ($res['id'],$res['nom'],$res['prenom'],$res['image'],
             $res['telephone'], $res['email'],$res['metier'],
-            $res['shortDescription']);
+            $res['shortDescrip']);
 
     }
 
     /**
      * @return array
      */
-    public function getListCourse()
+    public function getListEquipe()
     {
         // Retourne la liste de tous les courses.
 
@@ -58,9 +58,9 @@ class DecorEquipeManager
 
         while ($res = $req->fetch())
         {
-            $equipes[] = new Equipe($res['id'],$res['nom'],$res['prenom'],
+            $equipes[] = new Equipe($res['id'],$res['nom'],$res['prenom'],$res['image'],
                 $res['telephone'], $res['email'],$res['metier'],
-                $res['shortDescription']);
+                $res['shortDescrip']);
         }
 
 
@@ -75,14 +75,14 @@ class DecorEquipeManager
         // Exécution de la requête.
     }
 
-    /****
+/****
     public function deleteCourse($id)
     {
-    // Exécute une requête de type DELETE.
-    $this->_db->exec('DELETE  FROM course where id='.$id);
+        // Exécute une requête de type DELETE.
+        $this->_db->exec('DELETE  FROM course where id='.$id);
 
     }
-     ***/
+***/
     /*
         public function deleteCourse(Course $course)
         {

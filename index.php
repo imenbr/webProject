@@ -21,9 +21,28 @@
   
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
   <link rel="shortcut icon" href="images/favicon.ico">
+
+
+    <?php
+    require_once('DecorEquipeManager.php');
+    require_once('MySQLDatabase.php');
+
+    ?>
+
 </head><!--/head-->
 
 <body>
+<?php
+
+//BDD
+$mySQLDatabase = new MySQLDatabase();
+$db = $mySQLDatabase->getConnection();
+
+//Manager
+$decorEquipeManager = new DecorEquipeManager($db);
+?>
+
+
 
   <!--.preloader-->
   <div class="preloader"> <i class="fa fa-circle-o-notch fa-spin"></i></div>
@@ -64,7 +83,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="index.php">
             <h1><img class="img-responsive" src="images/transparent_text_effect.png" alt="logo"></h1>
           </a>                    
         </div>
@@ -392,102 +411,115 @@
   </section><!--/#portfolio-->
 
   <section id="team">
-    <div class="container">
-      <div class="row">
-        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
-          <h2>The Team</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>
-        </div>
+      <div class="container">
+          <div class="row">
+              <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
+                  <h2>The Team</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>
+              </div>
+          </div>
+          <div class="team-members">
+              <div class="row">
+
+              <!--foreach --->
+      <?php  $equipes = $decorEquipeManager->getListEquipe();
+      foreach ($equipes as  $equipe) { ?>
+          <div class="col-sm-3">
+              <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
+                  <div class="member-image">
+                      <img class="img-responsive" src="images/team/1.jpg" alt="">
+                  </div>
+                  <div class="member-info">
+                      <h3><?php echo $equipe->getPrenom()?><?php echo $equipe->getNom() ?></h3>
+                      <h4><?php echo $equipe->getMetier()?></h4>
+                      <p><?php echo $equipe->getShortDescrip()?></p>
+                  </div>
+                  <div class="social-icons">
+                      <ul>
+                          <li><a class="facebook" href="https://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
+                          <li><a class="twitter" href="https://twitter.com/?lang=fr"><i class="fa fa-twitter"></i></a></li>
+                          <li><a class="linkedin" href="https://www.linkedin.com/nhome/?trk="><i class="fa fa-linkedin"></i></a></li>
+                          <li><a class="dribbble" href="https://dribbble.com/"><i class="fa fa-dribbble"></i></a></li>
+                          <li><a class="rss" href="https://www.rss.com/login"><i class="fa fa-rss"></i></a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      <?php }  ?>
       </div>
-      <div class="team-members">
-        <div class="row">
-          <div class="col-sm-3">
-            <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
-              <div class="member-image">
-                <img class="img-responsive" src="images/team/1.jpg" alt="">
-              </div>
-              <div class="member-info">
-                <h3>Marian Dixon</h3>
-                <h4>CEO &amp; Founder</h4>
-                <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
-              </div>
-              <div class="social-icons">
-                <ul>
-                  <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-                  <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="500ms">
-              <div class="member-image">
-                <img class="img-responsive" src="images/team/2.jpg" alt="">
-              </div>
-              <div class="member-info">
-                <h3>Lawrence Lane</h3>
-                <h4>UI/UX Designer</h4>
-                <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
-              </div>
-              <div class="social-icons">
-                <ul>
-                  <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-                  <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="800ms">
-              <div class="member-image">
-                <img class="img-responsive" src="images/team/3.jpg" alt="">
-              </div>
-              <div class="member-info">
-                <h3>Lois Clark</h3>
-                <h4>Developer</h4>
-                <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
-              </div>
-              <div class="social-icons">
-                <ul>
-                  <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-                  <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="1100ms">
-              <div class="member-image">
-                <img class="img-responsive" src="images/team/4.jpg" alt="">
-              </div>
-              <div class="member-info">
-                <h3>Marian Dixon</h3>
-                <h4>Support Manager</h4>
-                <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
-              </div>
-              <div class="social-icons">
-                <ul>
-                  <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-                  <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>            
-    </div>
+
+      <!-- fin fereach-->
+      <!----
+
+             <div class="col-sm-3">
+               <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="500ms">
+                 <div class="member-image">
+                   <img class="img-responsive" src="images/team/2.jpg" alt="">
+                 </div>
+                 <div class="member-info">
+                   <h3>Lawrence Lane</h3>
+                   <h4>UI/UX Designer</h4>
+                   <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+                 </div>
+                 <div class="social-icons">
+                   <ul>
+                     <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                     <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                     <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                     <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                     <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
+                   </ul>
+                 </div>
+               </div>
+             </div>
+             <div class="col-sm-3">
+               <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="800ms">
+                 <div class="member-image">
+                   <img class="img-responsive" src="images/team/3.jpg" alt="">
+                 </div>
+                 <div class="member-info">
+                   <h3>Lois Clark</h3>
+                   <h4>Developer</h4>
+                   <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+                 </div>
+                 <div class="social-icons">
+                   <ul>
+                     <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                     <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                     <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                     <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                     <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
+                   </ul>
+                 </div>
+               </div>
+             </div>
+             <div class="col-sm-3">
+               <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="1100ms">
+                 <div class="member-image">
+                   <img class="img-responsive" src="images/team/4.jpg" alt="">
+                 </div>
+                 <div class="member-info">
+                   <h3>Marian Dixon</h3>
+                   <h4>Support Manager</h4>
+                   <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+                 </div>
+                 <div class="social-icons">
+                   <ul>
+                     <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                     <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                     <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                     <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                     <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
+                   </ul>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+       ----->
+
+
   </section><!--/#team-->
 
   <section id="features" class="parallax">
@@ -776,7 +808,7 @@
     <div class="footer-top wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
       <div class="container text-center">
         <div class="footer-logo">
-          <a href="index.html"><img class="img-responsive" src="images/logo.png" alt=""></a>
+          <a href="index.php"><img class="img-responsive" src="images/logo.png" alt=""></a>
         </div>
         <div class="social-icons">
           <ul>

@@ -15,7 +15,8 @@ class equipe
     private $_telephone;
     private $_email;
     private $_metier;
-    private $_shortDescription;
+    private $_shortDescrip;
+    private $_image;
 
     /**
      * equipe constructor.
@@ -29,15 +30,16 @@ class equipe
      */
 
 
-    public function __construct($_id, $_nom, $_prenom, $_telephone, $_email, $_metier, $_shortDescription)
+    public function __construct($_id, $_nom, $_prenom,$_image, $_telephone, $_email, $_metier, $_shortDescrip)
     {
         $this->_id = $_id;
         $this->_nom = $_nom;
         $this->_prenom = $_prenom;
+        $this->_image = $_image;
         $this->_telephone = $_telephone;
         $this->_email = $_email;
         $this->_metier = $_metier;
-        $this->_shortDescription = $_shortDescription;
+        $this->_shortDescrip = $_shortDescrip;
     }
 
     /**
@@ -75,11 +77,23 @@ class equipe
     /**
      * @return mixed
      */
+    public function getImage()
+    {
+        return $this->_image;
+    }
+
+    public function setImage($image)
+    {
+        $this->_image = $image;
+    }
+
+    /**
+     * @return mixed
+     */
     public function getPrenom()
     {
         return $this->_prenom;
     }
-
     /**
      * @param mixed $prenom
      */
@@ -142,17 +156,17 @@ class equipe
     /**
      * @return mixed
      */
-    public function getShortDescription()
+    public function getShortDescrip()
     {
-        return $this->_shortDescription;
+        return $this->_shortDescrip;
     }
 
     /**
      * @param mixed $shortDescription
      */
-    public function setShortDescription($shortDescription)
+    public function setShortDescription($shortDescrip)
     {
-        $this->_shortDescription = $shortDescription;
+        $this->_shortDescription = $shortDescrip;
     }
 
 
