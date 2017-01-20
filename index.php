@@ -241,7 +241,7 @@ $decorMaisonManager = new DecorMaisonManager($db);
           <!--foreach --->
           <?php  $maisons = $decorMaisonManager->getListMaison();
           foreach ($maisons as  $maison) { ?>
-
+        <div > rania </div>
               <div class="col-sm-3">
                   <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="300ms">
                       <div class="folio-image">
